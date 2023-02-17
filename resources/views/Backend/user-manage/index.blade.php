@@ -34,3 +34,8 @@
 
 </div>
 @endsection
+
+
+@section('js')
+@include('message')
+@endsection

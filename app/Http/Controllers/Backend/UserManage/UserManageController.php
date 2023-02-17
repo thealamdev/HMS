@@ -49,7 +49,7 @@ class UserManageController extends Controller
 
         $user->assignRole($request->role);
 
-        return back();
+        return redirect()->route('dashboard.user-manage.index')->with('success','User Create successfully');
     }
 
     /**
