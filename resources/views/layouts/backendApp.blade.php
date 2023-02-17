@@ -324,6 +324,7 @@
                                         </li>
                                     </ul>
                                 </li>
+                                @can('delete')
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#usermanagement">
                                         <i
@@ -370,6 +371,8 @@
 
                                     </ul>
                                 </li>
+                                @endcan
+                                 
 
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#apps_menu">
