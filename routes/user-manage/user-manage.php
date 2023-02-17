@@ -9,4 +9,5 @@ Route::controller(UserManageController::class)->middleware('role_or_permission:s
     Route::post('store','store')->name('store');
     Route::get('edit/{id}','edit')->name('edit');
     Route::put('update/{id}','update')->name('update');
+    Route::delete('delete/{id}','destroy')->name('delete');
 });

@@ -93,6 +93,9 @@ class UserManageController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // return $id;
+        $user = User::find($id);
+        $user->delete();
+        return back()->with('success','User Delete Successfully');
     }
 }
