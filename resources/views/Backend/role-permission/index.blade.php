@@ -27,8 +27,13 @@
                                         @endforeach
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary"><i class="las la-edit"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="las la-trash"></i></a>
+                                        <a href="{{ route('dashboard.role-pemission.edit',$role->id ) }}" class="btn btn-primary"><i class="las la-edit"></i></a>
+                                         
+                                        <form action="{{ route('dashboard.role-pemission.delete',$role->id) }}" method="POST" style="display:inline-block">
+                                            @method('DELETE')
+                                            @csrf
+                                        <button type="button" class="btn btn-danger delete_btn"><i class="las la-trash"></i></button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
@@ -44,5 +49,14 @@
 @endsection
 
 @section('js')
+<script>
+    $(document).ready(function(){
+         $('.delete_btn').on('click',function(){
+            if(confirm('Are you really want to delete Role ?') == true){
+                $(this).closest('form').submit();
+            }
+         })
+    })
+</script>
     @include('message')
 @endsection

@@ -59,7 +59,7 @@ class RolePermissionController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('Backend.role-permission.edit');
     }
 
     /**
@@ -75,7 +75,10 @@ class RolePermissionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $role = Role::find($id);
+        $role->delete();
+        return back()->with('success','Role Delete succssfull');
+        
     }
 
     public function RolePermission(Request $request){
