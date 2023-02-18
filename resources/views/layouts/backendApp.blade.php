@@ -376,8 +376,13 @@
                                     </a>
                                     <ul class="sidebar-submenu collapse" id="doctors_menu">
                                         <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="{{ route('dashboard.doctors.registration') }}">
+                                            <a class="sidebar-menu-button" href="{{ route('dashboard.doctors.create') }}">
                                                 <span class="sidebar-menu-text">Doctors Registration</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="{{ route('dashboard.doctors.index') }}">
+                                                <span class="sidebar-menu-text">All Doctors</span>
                                             </a>
                                         </li>
 

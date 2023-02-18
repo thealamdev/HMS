@@ -3,18 +3,21 @@
 namespace App\Http\Controllers\Backend\Doctors;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class DoctorsController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
-    public function registration()
+    public function index()
     {
-        return view('Backend.doctors.registration');
+        $doctors = Doctor::get();
+        return view('Backend.doctors.index',compact('doctors'));
     }
 
     /**
@@ -22,7 +25,7 @@ class DoctorsController extends Controller
      */
     public function create()
     {
-        //
+        return view('Backend.doctors.registration');
     }
 
     /**
@@ -30,7 +33,33 @@ class DoctorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $valided = $request->validate([
+        //     'first_name'=> 'required',
+        //     'last_name' => 'required',
+        //     'title' => 'required',
+        //     'email' => 'required',
+        //     'phone' => 'required',
+        //     'experience' => 'required',
+        //     'fees' => 'required',
+             
+        //     'degree' => 'required'
+        // ]);
+
+        
+            $doctors = Doctor::create([
+            'first_name'=> $request->fname,
+            'last_name' => $request->lname,
+            'title' => $request->title,
+            'email' =>  $request->email,
+            'phone' => $request->number,
+            'experience' => $request->experience,
+            'fees' => $request->fees,
+            'photo' => 'photo.jpg',
+            'degree' => $request->degree,
+            ]);
+        
+
+        return redirect()->route('dashboard.doctors.index')->with('success','Doctors Registration Done');
     }
 
     /**

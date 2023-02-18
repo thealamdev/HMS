@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('available_date');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('title');
@@ -22,9 +21,6 @@ return new class extends Migration
             $table->string('degree');
             $table->string('experience');
             $table->string('fees');
-            $table->string('photo');
-            $table->time('start_time');
-            $table->time('end_time');
             $table->string('photo');
             $table->timestamps();
         });
