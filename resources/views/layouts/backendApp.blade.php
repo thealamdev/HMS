@@ -9,15 +9,11 @@
     <meta name="robots" content="noindex">
     <link type="text/css" href="{{ asset('backend/vendor/perfect-scrollbar.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('backend/css/app.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('backend/css/app.rtl.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('backend/css/vendor-material-icons.css') }}">
     <link type="text/css" href="{{ asset('backend/css/vendor-material-icons.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('backend/css/vendor-fontawesome-free.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('backend/css/vendor-fontawesome-free.rtl.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('backend/css/vendor-flatpickr.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('backend/css/vendor-flatpickr.rtl.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('backend/css/vendor-flatpickr-airbnb.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('backend/css/vendodr-flatpickr-airbnb.rtl.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link type="text/css" href="{{ asset('backend/css/toastr.min.css') }}" rel="stylesheet">
     @yield('css')
@@ -77,7 +73,51 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
+ 
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <a href="">A.Demian</a> left a comment on <a
+                                                        href="">FlowDash</a><br>
+                                                    <small class="text-muted">1 minute ago</small>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <a href="#">
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title bg-purple rounded-circle"><i
+                                                                    class="material-icons icon-16pt">person_add</i></span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="flex">
+                                                    New user <a href="#">Peter Parker</a> signed up.<br>
+                                                    <small class="text-muted">1 hour ago</small>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <a href="#">
+                                                        <div class="avatar avatar-xs"
+                                                            style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title rounded-circle">JD</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="flex">
+                                                    <a href="#">Big Joe</a> <small
+                                                        class="text-muted">wrote:</small><br>
+                                                    <div>Hey, how are you? What about our next meeting</div>
+                                                    <small class="text-muted">2 minutes ago</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
+                                                            <img src="{{ asset('backend/images/256_daniel-gaffey-1060698-unsplash.jpg') }}"
                                                             alt="Avatar" class="avatar-img rounded-circle">
                                                     </div>
                                                 </div>
@@ -122,53 +162,7 @@
                                             <div class="dropdown-item d-flex">
                                                 <div class="mr-3">
                                                     <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
-                                                            alt="Avatar" class="avatar-img rounded-circle">
-                                                    </div>
-                                                </div>
-                                                <div class="flex">
-                                                    <a href="">A.Demian</a> left a comment on <a
-                                                        href="">FlowDash</a><br>
-                                                    <small class="text-muted">1 minute ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item d-flex">
-                                                <div class="mr-3">
-                                                    <a href="#">
-                                                        <div class="avatar avatar-xs"
-                                                            style="width: 32px; height: 32px;">
-                                                            <span class="avatar-title bg-purple rounded-circle"><i
-                                                                    class="material-icons icon-16pt">person_add</i></span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="flex">
-                                                    New user <a href="#">Peter Parker</a> signed up.<br>
-                                                    <small class="text-muted">1 hour ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-item d-flex">
-                                                <div class="mr-3">
-                                                    <a href="#">
-                                                        <div class="avatar avatar-xs"
-                                                            style="width: 32px; height: 32px;">
-                                                            <span class="avatar-title rounded-circle">JD</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="flex">
-                                                    <a href="#">Big Joe</a> <small
-                                                        class="text-muted">wrote:</small><br>
-                                                    <div>Hey, how are you? What about our next meeting</div>
-                                                    <small class="text-muted">2 minutes ago</small>
-                                                </div>
-                                            </div>
-
-                                            <div class="dropdown-item d-flex">
-                                                <div class="mr-3">
-                                                    <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
-                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
-                                                            alt="Avatar" class="avatar-img rounded-circle">
+                                                             
                                                     </div>
                                                 </div>
                                                 <div class="flex">
@@ -373,6 +367,25 @@
                                 </li>
                                 @endcan
                                  
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#doctors_menu">
+                                        <i
+                                            class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
+                                        <span class="sidebar-menu-text">Doctors Management</span>
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse" id="doctors_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="{{ route('dashboard.doctors.registration') }}">
+                                                <span class="sidebar-menu-text">Doctors Registration</span>
+                                            </a>
+                                        </li>
+
+                                         
+
+                                    </ul>
+                                </li>
+
 
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#apps_menu">
@@ -468,15 +481,15 @@
     <script src="{{ asset('backend/vendor/moment-range.js') }}"></script>
 
     <!-- Chart.js') }} -->
-    <script src="{{ asset('backend/vendor/Chart.min.js') }}"></script>
+    {{-- <script src="{{ asset('backend/vendor/Chart.min.js') }}"></script> --}}
 
     <!-- App Charts JS -->
-    <script src="{{ asset('backend/js/charts.js') }}"></script>
-    <script src="{{ asset('backend/js/chartjs-rounded-bar.js') }}"></script>
+    {{-- <script src="{{ asset('backend/js/charts.js') }}"></script>
+    <script src="{{ asset('backend/js/chartjs-rounded-bar.js') }}"></script> --}}
 
     <!-- Chart Samples -->
-    <script src="{{ asset('backend/js/page.dashboard.js') }}"></script>
-    <script src="{{ asset('backend/js/progress-charts.js') }}"></script>
+    {{-- <script src="{{ asset('backend/js/page.dashboard.js') }}"></script>
+    <script src="{{ asset('backend/js/progress-charts.js') }}"></script> --}}
 
     <!-- Vector Maps -->
     <script src="{{ asset('backend/vendor/jqvmap/jquery.vmap.min.js') }}"></script>

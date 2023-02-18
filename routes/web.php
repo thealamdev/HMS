@@ -49,4 +49,11 @@ Route::prefix('dashboard')->name('dashboard.')->group(function () {
             require __DIR__ . '/user-manage/user-manage.php';
         });
     });
+
+    // doctors routes:
+    Route::middleware(['auth'])->group(function () {
+        Route::prefix('doctors')->name('doctors.')->group(function () {
+            require __DIR__ . '/doctors/doctors.php';
+        });
+    });
 });
