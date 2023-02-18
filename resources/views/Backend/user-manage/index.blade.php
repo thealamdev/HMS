@@ -6,7 +6,7 @@
             <thead>
                 <th>Id</th>
                 <th>User Name</th>
-                <th>User Role Permission</th>
+                <th>User Role</th>
                 <th>Actions</th>
             </thead>
             <tbody>
@@ -14,6 +14,7 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
+                         
                         <td>
                             @foreach ($user->roles as $role)
                                 <span class="badge rounded-pill bg-warning">{{ $role->name }}</span>

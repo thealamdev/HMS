@@ -59,7 +59,10 @@ class RolePermissionController extends Controller
      */
     public function edit(string $id)
     {
-        return view('Backend.role-permission.edit');
+        $role = Role::where('id',$id)->with('permissions')->first();
+        $permissions = Permission::get(['id','name']);
+        // return $role;
+        return view('Backend.role-permission.edit',compact('role','permissions'));
     }
 
     /**
@@ -67,7 +70,12 @@ class RolePermissionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $role = Role::find($id);
+        $role->update([
+            'name'=> $request->name,
+        ]);
+        $role->syncPermissions($request->permssions);
+        return back()->with('success','Role and Permission Update successfully');
     }
 
     /**
