@@ -318,7 +318,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                @can('delete')
+                                @can('edit','delete')
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#usermanagement">
                                         <i
@@ -347,13 +347,15 @@
                                                 <span class="sidebar-menu-text">Role Assign</span>
                                             </a>
                                         </li>
-
+                                        @can('delete')
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button"
                                                 href="{{ route('dashboard.user-manage.create') }}">
                                                 <span class="sidebar-menu-text">User Create</span>
                                             </a>
                                         </li>
+                                        @endcan
+                                        
 
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button"
